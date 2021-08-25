@@ -182,14 +182,14 @@ export default {
         ".main__article--crisis"
       ).scrollHeight;
 
-      console.log("userWindow=>" + window.screen.availHeight);
-      console.log("banner：" + banner);
-      console.log("feature：" + feature);
-      console.log("story：" + story);
-      console.log("picture：" + picture);
-      console.log("crisis：" + crisis);
-      console.log("test:" + (banner + feature + story + picture - userWindow));
-      console.log("scroll->>>>>>>>>" + scroll);
+      // console.log("userWindow=>" + window.screen.availHeight);
+      // console.log("banner：" + banner);
+      // console.log("feature：" + feature);
+      // console.log("story：" + story);
+      // console.log("picture：" + picture);
+      // console.log("crisis：" + crisis);
+      // console.log("test:" + (banner + feature + story + picture - userWindow));
+      // console.log("scroll->>>>>>>>>" + scroll);
 
       // Feature
       if (scroll <= banner + feature) {
