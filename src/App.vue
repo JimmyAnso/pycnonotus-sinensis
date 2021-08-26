@@ -8,7 +8,7 @@
       </div>
       <h1 class="header__title">白頭翁不吃小米</h1>
       <nav class="header__nav" :class="{ available: hamClicked }">
-        <div @click="birdSound()" class="birdsound">⊙&lt;</div>
+        <div @click="sound('bird')" class="sound">⊙&lt;</div>
         <audio id="bird" autoplay="autoplay">
           <source src="./assets/birdsound.mp3" />
         </audio>
@@ -88,29 +88,50 @@
           </div>
         </section>
         <section class="main__article--story" id="story">
-          <h3 class="story__title">白頭翁的故事</h3>
+          <h3 class="story__title">
+            白頭翁的故事 &nbsp;&nbsp;&nbsp;
+            <small @click="sound('storysound')" class="sound">⊙&lt;</small>
+            <audio id="storysound">
+              <source src="./assets/storysound.mp3" />
+            </audio>
+          </h3>
+
           <p class="story__content">
-            傳說，在大森林裡有一隻美麗的小鳥，它想學一點本領。這一天，它走出家門，決定去拜師學藝。它看見喜鵲阿姨造了一座既漂亮又寬敞明亮的房子，覺得造房子很有意思，決定學習這一行。起初，它跟著喜鵲非常認真地學習，可是學著學著，它就覺得造房子很沒意思，開始厭倦了。它說：“天天造房子，沒有什麼樂趣，還很累。”於是，便不再學造房子了。一天，它聽到黃鶯姐姐的歌聲那麼動聽，覺得唱歌很好玩兒，就去拜黃鶯姐姐為師學習唱歌。開始，它學得很認真，但是沒過多久又厭倦了。它說：“學唱歌要天天練嗓子，太辛苦了，我實在受不了。”於是，它不再學唱歌了。它又看到大雁叔叔能遠行萬里，就去拜大雁為師學飛行；它看見老鷹伯伯敏捷的動作，就去拜老鷹伯伯為師學習打獵；它看到啄木鳥醫生醫術高超，就去拜啄木鳥為師，學習醫治得病的樹木。它從森林的這邊走到森林的那邊，看見什麼，就去學什麼，拜了一位老師又一位老師，最後都是有始無終，沒有一件事情能堅持到底。日子一天一天過去，一年又一年過去，直到它的頭髮全白了，還沒有學到什麼本領。它開始認識到自己錯了，但是已經太晚了。它沒有什麼本領可以傳給自己的子孫後代，感到很慚愧。想到自己一生拜師學藝，不能堅持到底，結果一事無成，決定讓子孫記住這個教訓，它就把自己的一頭白髮傳給後代，讓它們世世代代都記住這個教訓。從此，人們給這種鳥起了一個名字——白頭翁。小朋友，白頭翁的故事告訴我們：做事情不能堅持到底，總是半途而廢，就會一事無成，學不到真正的本領。
+            傳說，在大森林裡有一隻美麗的小鳥，它想學一點本領。這一天，它走出家門，決定去拜師學藝。它看見喜鵲阿姨造了一座既漂亮又寬敞明亮的房子，覺得造房子很有意思，決定學習這一行。起初，它跟著喜鵲非常認真地學習，可是學著學著，它就覺得造房子很沒意思，開始厭倦了。它說：「天天造房子，沒有什麼樂趣，還很累。」於是，便不再學造房子了。一天，它聽到黃鶯姐姐的歌聲那麼動聽，覺得唱歌很好玩兒，就去拜黃鶯姐姐為師學習唱歌。開始，它學得很認真，但是沒過多久又厭倦了。它說：「學唱歌要天天練嗓子，太辛苦了，我實在受不了。」於是，它不再學唱歌了。它又看到大雁叔叔能遠行萬里，就去拜大雁為師學飛行；它看見老鷹伯伯敏捷的動作，就去拜老鷹伯伯為師學習打獵；它看到啄木鳥醫生醫術高超，就去拜啄木鳥為師，學習醫治得病的樹木。它從森林的這邊走到森林的那邊，看見什麼，就去學什麼，拜了一位老師又一位老師，最後都是有始無終，沒有一件事情能堅持到底。日子一天一天過去，一年又一年過去，直到它的頭髮全白了，還沒有學到什麼本領。它開始認識到自己錯了，但是已經太晚了。它沒有什麼本領可以傳給自己的子孫後代，感到很慚愧。想到自己一生拜師學藝，不能堅持到底，結果一事無成，決定讓子孫記住這個教訓，它就把自己的一頭白髮傳給後代，讓它們世世代代都記住這個教訓。從此，人們給這種鳥起了一個名字——白頭翁。小朋友，白頭翁的故事告訴我們：做事情不能堅持到底，總是半途而廢，就會一事無成，學不到真正的本領。
           </p>
         </section>
         <section class="main__article--picture" id="picture">
           <div class="pic pic-1">
-            <h4>關於小白頭翁</h4>
-            <p>
-              雌、雄鳥共同育雛，幼鳥需要經過大約十天到兩個星期的孵化才能破殼而出，再經過大約十天到兩、三個星期的餵食，就可以出巢。
-            </p>
+            <div class="pic__txtbox">
+              <div class="pic__txtbox--content">
+                <h4>關於小白頭翁</h4>
+                <p>
+                  雌、雄鳥共同育雛，幼鳥需要經過大約十天到兩個星期的孵化才能破殼而出，再經過大約十天到兩、三個星期的餵食，就可以出巢
+                </p>
+              </div>
+            </div>
           </div>
           <p>&nbsp;</p>
           <div class="pic pic-2">
-            <h4>白頭翁其實還有親戚</h4>
-            <p>
-              有一種長得和牠很像的親戚，叫「烏頭翁」，牠只有頭頂是黑色的，其餘特徵都和白頭翁很類似，是台灣的特有種，只分布在臺東、花蓮和恆春半島
-            </p>
+            <div class="pic__txtbox">
+              <div class="pic__txtbox--content">
+                <h4>白頭翁其實還有親戚</h4>
+                <p>
+                  有一種長得和牠很像的親戚，叫「烏頭翁」，牠只有頭頂是黑色的，其餘特徵都和白頭翁很類似，是台灣的特有種，只分布在臺東、花蓮和恆春半島
+                </p>
+              </div>
+            </div>
           </div>
           <p>&nbsp;</p>
           <div class="pic pic-3">
-            <h4>白頭翁的亞種</h4>
-            <p>分別為白頭翁指名亞種、白頭翁海南（兩廣）亞種、白頭翁台灣亞種</p>
+            <div class="pic__txtbox">
+              <div class="pic__txtbox--content">
+                <h4>白頭翁的亞種</h4>
+                <p>
+                  分別為白頭翁指名亞種、白頭翁海南（兩廣）亞種、白頭翁台灣亞種
+                </p>
+              </div>
+            </div>
           </div>
           <p>&nbsp;</p>
         </section>
@@ -151,7 +172,7 @@ export default {
     setSectionTarget(sectionItem) {
       // 取得所有 section
       let sections = document.getElementsByTagName("section");
-      console.log(sections);
+      // console.log(sections);
 
       // 消除所有 section 的 section-target 樣式
       sections.forEach((section) => {
@@ -243,8 +264,8 @@ export default {
       this.setNavActive(e.target);
       document.querySelector(".header__hamburger").click();
     },
-    birdSound() {
-      var audio = document.getElementById("bird");
+    sound(id) {
+      var audio = document.getElementById(id);
       if (audio.paused) {
         audio.play(); // 播放
       } else {
@@ -268,6 +289,11 @@ export default {
   padding: 0;
   list-style: none;
   text-decoration: none;
+  scroll-behavior: smooth;
+}
+p{
+  font-family: cursive;
+  font-size: 17px;
 }
 
 .pycnonotus-sinensis {
@@ -368,7 +394,6 @@ export default {
         height: 10px;
         box-sizing: border-box;
         border-top: 6px solid black;
-        /* border-bottom: 8px solid black; */
         border-radius: 30% 700% 0% 0%;
         position: absolute;
         top: 32%;
@@ -414,8 +439,6 @@ export default {
           align-items: flex-start;
           flex: 1;
           margin: 0 25px;
-          /* padding: 60px 25px;
-          box-sizing: border-box; */
           &:hover > .feature__title {
             transform: rotate(-10deg) translate(-10px, -10px);
           }
@@ -448,7 +471,7 @@ export default {
         margin: 50px auto;
         padding: 20px;
         .story__title {
-          margin-bottom: 10px;
+          margin:0 20px 20px;
         }
         .story__content {
           line-height: 1.8;
@@ -457,33 +480,67 @@ export default {
         }
       }
       &--picture {
-        position: relative;
+        // position: relative;
         .pic {
           width: 100%;
           height: 300vh;
           color: white;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-end;
+          // display: flex;
+          // flex-direction: column;
+          // justify-content: center;
+          // align-items: flex-end;
+          // position: relative;
+          padding: 300px 0;
+
           text-align: right;
           filter: brightness(0.9);
           transition: 0.5s;
           &:hover {
             filter: brightness(1.2);
+            & .pic__txtbox {
+              opacity: 1;
+            }
+            & .pic__txtbox--content {
+              animation-name: smooth;
+              animation-duration: 2s;
+              animation-iteration-count: 1;
+            }
+            @keyframes smooth {
+              0% {
+                transform: translateX(40vw);
+                opacity: 0;
+              }
+              40% {
+                transform: translateX(20px);
+              }
+              100% {
+                transform: translateX(0vw);
+                opacity: 1;
+              }
+            }
           }
-          h4 {
-            font-size: 24px;
-            margin: 0 15px;
-            backdrop-filter: blur(5px);
-            border-radius: 10px;
-            padding: 5px 10px;
-          }
-          p {
-            margin: 0 15px;
-            backdrop-filter: blur(5px);
-            border-radius: 10px;
-            padding: 5px 10px;
+          &__txtbox {
+            background-color: #00000040;
+            opacity: 0;
+            transition: all 0.5s ease-in-out 0.5s;
+            position: sticky;
+            top: 60vh;
+            overflow: hidden;
+            &--content {
+              h4 {
+                font-size: 24px;
+                margin: 0 15px;
+                // backdrop-filter: blur(5px);
+                border-radius: 10px;
+                padding: 5px 10px;
+              }
+              p {
+                margin: 0 15px;
+                // backdrop-filter: blur(5px);
+                border-radius: 10px;
+                padding: 5px 10px;
+              }
+            }
           }
           &-1 {
             background: center / cover no-repeat
@@ -550,6 +607,7 @@ export default {
     }
   }
 }
+
 .header__nav--link.nav-active {
   color: #aa6666;
   font-weight: bold;
@@ -562,20 +620,21 @@ export default {
     bottom: 0;
   }
 }
-.birdsound {
+.sound {
+  writing-mode: horizontal-tb;
   cursor: pointer;
-  &:hover{ 
-    color:#aa6666; 
-    animation:birdsound 0.3s ease 0s infinite alternate;
+  &:hover {
+    color: #aa6666;
+    animation: sound 0.3s ease 0s infinite alternate;
   }
-  @keyframes birdsound {
-      from{
-        transform: rotate(-2deg)translateX(-2px);
-      }
-      to{
-        transform: rotate(2deg)translateX(2px);
-      }
+  @keyframes sound {
+    from {
+      transform: rotate(-2deg) translateX(-2px);
     }
+    to {
+      transform: rotate(2deg) translateX(2px);
+    }
+  }
 }
 section:target {
   box-shadow: 0 0 20px 10px gray;
