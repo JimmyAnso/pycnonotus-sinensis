@@ -291,7 +291,7 @@ export default {
   text-decoration: none;
   scroll-behavior: smooth;
 }
-p{
+p {
   font-family: cursive;
   font-size: 17px;
 }
@@ -301,7 +301,8 @@ p{
   .header {
     // width: 80%;
     height: 100vh;
-    min-width: 350px;
+    width: 350px;
+    // min-width: 350px;
     // min-width: 275px;
     position: sticky;
     top: 0;
@@ -403,6 +404,7 @@ p{
     }
   }
   .main {
+    width: calc(100% - 350px);
     box-shadow: 0px 0px 5px 0px grey;
     &__banner {
       width: 100%;
@@ -466,12 +468,12 @@ p{
         }
       }
       &--story {
-        height: 50vh;
+        height: 60vh;
         writing-mode: vertical-rl;
         margin: 50px auto;
-        padding: 20px;
+        padding: 20px 5px;
         .story__title {
-          margin:0 20px 20px;
+          margin: 0 0 20px 20px;
         }
         .story__content {
           line-height: 1.8;
@@ -660,7 +662,9 @@ section:target {
           }
         }
         &--story {
-          height: 70vh;
+          height: auto;
+          writing-mode: horizontal-tb;
+          padding: 15px;
         }
       }
     }
@@ -722,6 +726,7 @@ section:target {
       }
     }
     .main {
+      width: 100%;
       &__banner {
         height: auto;
         min-height: 300px;
